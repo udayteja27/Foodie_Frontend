@@ -7,7 +7,7 @@ const Register = ({ showLoginHandler }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false); // Set loading to false initially
   const [showPassword, setShowPassword] = useState(false);
 
   const handleShowPassword = () => {
@@ -16,7 +16,7 @@ const Register = ({ showLoginHandler }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(true); // Set loading to true when the request starts
     try {
       const response = await fetch(`${API_URL}/vendor/register`, {
         method: 'POST',

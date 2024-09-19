@@ -10,7 +10,7 @@ const AddProduct = () => {
     const [bestSeller, setBestSeller] = useState(false);
     const [image, setImage] = useState(null);
     const [description, setDescription] = useState("");
-    const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false); 
 
 
     const handleCategoryChange = (event)=>{
@@ -56,10 +56,7 @@ const AddProduct = () => {
    
           const response = await fetch(`${API_URL}/product/add-product/${firmId}`, {
             method:'POST',
-            body: formData,
-            headers: {
-              Authorization: `Bearer ${loginToken}`,
-            },
+            body: formData
           })
             const data = await response.json()
 
